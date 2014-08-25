@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      Search: <input ng-model="query">
+      Sort by:
+      <a href="" ng-click="predicate = 'company'; reverse=!reverse">Company Name</a>
+      <a href="" ng-click="predicate = 'twitterHandle'; reverse=!reverse">Twitter Handle</a>
+
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+
+      <ul class="companies">
+        <li ng-repeat="company in companies | filter:query | orderBy:predicate:reverse" class="company-listing">
+          <h4>
+            {{company.company}} - 
+            <span ng-show="company.twitterHandle"><a href="https://www.twitter.com/{{company.twitterHandle}}" target="_blank">@{{company.twitterHandle}}</a> -</span>
+            <a href="http://{{company.domain}}" target="_blank">{{company.domain}}</a>
+          </h4>
+          <div ng-controller="CompanyHandlesCtrl">
+            <button class="btn btn-default" ng-click="handlesBtn(company._id)">Twitter Handles</button>
+            <hr>
+            <div collapse="isCollapsed">
+              <div class="well well-lg">
+                <table>
+                  <tr ng-repeat="handle in handles">
+                    <td style="padding: .5em 1em;"><a href="http://www.twitter.com/{{handle.screen_name}}" target="_blank">@{{handle.screen_name}}</a></td>
+                    <td style="padding: .5em 1em;">{{handle.score}}</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+{
+	"name": "twitter_find",
+	"main": "./server.js",
+	"dependencies": {
+		"requirejs": "*",
+		"express": "*",
+		"body-parser": "*",
+		"express-session": "*",
+		"node-uuid": "*",
+		"csv": "0.3.6",
+		"mongodb": "*",
+		"helmet": "*"
+	},
+	"devDependencies": {
+		"mocha": "1.14.0",
+		"supertest": "0.8.0"
+	},
+	"scripts": {
+		"start": "node ./server.js",
+		"test": "make test"
+	}
+}

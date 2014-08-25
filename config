@@ -1,0 +1,29 @@
+development: {
+	http: {
+		port: 5634
+	},
+	mongodb: {
+		host: '127.0.0.1',
+		port: 27017,
+		database: 'twitter2'
+	},
+	twitter: {
+		consumer_key: 'uQy0tlrPDkOrwMkE1iAJbCY7X',
+		consumer_secret: 'ZW3jqoHrYOScjQ4AeElB2hodNlhIoHKRwp0R2avQ5ecX9QIsjh'
+	},
+	fixtures: {
+		//companies: 'sample_companies.csv'
+	}
+},
+
+testing: {
+
+},
+
+stagging: {
+
+},
+
+production: {
+
+}
