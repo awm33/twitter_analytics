@@ -8,8 +8,8 @@ development: {
 		database: 'twitter2'
 	},
 	twitter: {
-		consumer_key: 'uQy0tlrPDkOrwMkE1iAJbCY7X',
-		consumer_secret: 'ZW3jqoHrYOScjQ4AeElB2hodNlhIoHKRwp0R2avQ5ecX9QIsjh'
+		consumer_key: 'consumer_key',
+		consumer_secret: 'consumer_secret'
 	},
 	fixtures: {
 		//companies: 'sample_companies.csv'
